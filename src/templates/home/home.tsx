@@ -1,10 +1,11 @@
-import { HeroSection } from "./sections";
+import { HeroSection, WelcomeSection, GroupSection } from "./sections";
 
 export function HomePage() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col relative">
       <HeroSection />
-      <HeroSection />
+      <WelcomeSection />
+      <GroupSection />
     </main>
   );
 }
