@@ -1,4 +1,9 @@
-import { HeroSection, WelcomeSection, GroupSection } from "./sections";
+import {
+  HeroSection,
+  WelcomeSection,
+  GroupSection,
+  ExperiencesSection,
+} from "./sections";
 
 export function HomePage() {
   return (
@@ -6,6 +11,7 @@ export function HomePage() {
       <HeroSection />
       <WelcomeSection />
       <GroupSection />
+      <ExperiencesSection />
     </main>
   );
 }
