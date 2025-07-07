@@ -2,13 +2,13 @@ import React from "react";
 
 export function WelcomeSection() {
   return (
-    <div className="w-full h-[26rem] flex flex-col items-center justify-center px-4 py-8 relative">
+    <div className="w-full h-[26rem] flex flex-col items-center justify-center px-4 py-8 relative bg-background">
       <div className="flex flex-col gap-10 max-w-5xl text-center">
-        <h1 className="text-xl sm:text-3xl font-semibold tracking-[0.8rem]">
+        <h1 className="text-xl sm:text-3xl font-medium tracking-[0.8rem]">
           BEM - VINDO
         </h1>
-        <p className="text-xs sm:text-sm font-normal">
-          orem Ipsum is simply dummy text of the printing and typesetting
+        <p className="text-xs sm:text-sm font-light max-w-2xl">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the s standard dummy text ever since
           the 1500s, when an unknown printer took a galley of type and scrambled
           it to make a type specimen book. It has survived not only five

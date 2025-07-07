@@ -18,7 +18,7 @@ const NAV_LINKS = [
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Acompanha o scroll da página
   useEffect(() => {

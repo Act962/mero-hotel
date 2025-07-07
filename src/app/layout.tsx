@@ -6,6 +6,11 @@ const novera = localFont({
   variable: "--font-novera-sans",
   src: [
     {
+      path: "../fonts/Novera-ClassicLight.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
       path: "../fonts/Novera-ClassicRegular.otf",
       weight: "400",
       style: "normal",
@@ -15,18 +20,18 @@ const novera = localFont({
       weight: "500",
       style: "normal",
     },
+    {
+      path: "../fonts/Novera-ClassicSemiBold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Novera-ClassicBold.otf",
+      weight: "700",
+      style: "normal",
+    },
   ],
 });
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "Mero Hotel",
@@ -39,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${novera.variable} ${novera.className}  antialiased`}>
         {children}
       </body>

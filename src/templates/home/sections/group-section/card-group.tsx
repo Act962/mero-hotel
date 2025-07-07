@@ -21,7 +21,7 @@ export function CardGroup() {
         <Image
           src="/image-3.jpg"
           alt="Mero Hotel"
-          className="h-60 sm:h-72 md:h-96 w-full object-cover group-hover:scale-105 transition-all duration-300"
+          className="h-60 sm:h-72 md:h-96 w-full object-cover group-hover:scale-105 transition-transform duration-300"
           width={600}
           height={600}
         />

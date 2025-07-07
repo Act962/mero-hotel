@@ -9,14 +9,14 @@ export default function CardExperiences() {
         <Image
           src="/image-4.jpg"
           alt="Gastronomia"
-          className="w-full aspect-auto group-hover:scale-105 transition-all duration-300"
+          className="w-full object-cover  group-hover:scale-110 transition-transform duration-300"
           width={200}
           height={200}
         />
       </div>
 
       <div className="text-start space-y-3 mt-8">
-        <h3 className="font-bold tracking-[0.6rem]">GASTRONOMIA</h3>
+        <h3 className="font-medium text-xl tracking-[0.6rem]">GASTRONOMIA</h3>
         <p className="text-xs sm:text-sm">
           Lorem ipsum dolor sit amet consectetur adipiscing elit tempus
           facilisis pellentesque, torquent fringilla porttitor quisque nec risus
@@ -24,7 +24,7 @@ export default function CardExperiences() {
         </p>
         <Link
           href="/"
-          className="uppercase underline underline-offset-3 hover:text-gray-300"
+          className="uppercase underline underline-offset-3 hover:text-gray-500"
         >
           Saiba mais
         </Link>
