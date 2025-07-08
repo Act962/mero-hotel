@@ -61,7 +61,7 @@ export function Navbar() {
   return (
     <div
       className={cn(
-        "fixed top-0 w-full z-10 px-4 py-5 transition-colors duration-300 text-white",
+        "fixed top-0 w-full z-20 px-4 py-5 transition-colors duration-300 text-white",
         isScrolled && "bg-background text-black backdrop-blur"
       )}
     >
@@ -71,14 +71,14 @@ export function Navbar() {
           <div className="size-4">
             {/* Mobile */}
             <Menu
-              className="size-4 md:hidden"
+              className="size-4 md:hidden cursor-pointer"
               onClick={() => setOpenMenu(true)}
             />
 
             {/* Button Desktop */}
             {isScrolled && (
               <Menu
-                className="size-4 hidden md:block"
+                className="size-4 hidden md:block cursor-pointer"
                 onClick={() => setOpenMenu(true)}
               />
             )}
@@ -116,7 +116,7 @@ export function Navbar() {
       {/* Menu Mobile */}
 
       <div
-        className={`md:hidden fixed w-full h-screen left-0 top-0 bottom-0 overflow-hidden bg-background transition-all text-black px-4 pt-4 ${
+        className={`fixed w-full h-screen left-0 top-0 bottom-0 overflow-hidden bg-background transition-all text-black px-4 pt-4 ${
           openMenu ? "translate-x-0" : "-translate-x-full"
         }`}
       >

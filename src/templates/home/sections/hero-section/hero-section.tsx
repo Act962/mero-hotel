@@ -1,5 +1,15 @@
 import React from "react";
 
 export function HeroSection() {
-  return <div className="min-h-screen w-full bg-gray-900"></div>;
+  return (
+    <div className="h-[80vh] md:h-screen w-full bg-gray-900">
+      <video
+        src="/_next-video/Fasano-HoteisLazer_Hor_SemLogo-baixa-1.mp4"
+        autoPlay
+        muted
+        loop
+        className="h-full w-full object-cover"
+      ></video>
+    </div>
+  );
 }

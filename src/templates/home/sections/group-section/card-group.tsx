@@ -3,41 +3,41 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export interface CardGroup {
+interface CardGroupProps {
   title: string;
   description: string;
   imageUrl: string;
   link: string;
 }
 
-export function CardGroup() {
+export function CardGroup({
+  title,
+  description,
+  imageUrl,
+  link,
+}: CardGroupProps) {
   return (
     <div className="text-start flex flex-col gap-4">
       <h3 className=" text-lg  md:text-xl font-normal tracking-[0.6rem]">
-        MERO HOTEL
+        {title}
       </h3>
 
       <div className="relative overflow-hidden group">
         <Image
-          src="/image-3.jpg"
+          src={imageUrl}
           alt="Mero Hotel"
           className="h-60 sm:h-72 md:h-96 w-full object-cover group-hover:scale-105 transition-transform duration-300"
-          width={600}
-          height={600}
+          width={2196}
+          height={1170}
         />
-        {/* <div className="absolute w-full bottom-0 h-0 z-20 bg-gradient-to-t from-black/20 to-transparent group-hover:h-[50%] transition-all duration-300" /> */}
       </div>
 
       <div className="flex flex-col gap-3">
-        <p className="text-xs sm:text-sm font-medium">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit tempus
-          facilisis pellentesque, torquent fringilla porttitor quisque nec risus
-          venenatis
-        </p>
+        <p className="text-xs sm:text-sm font-medium">{description}</p>
 
         <Separator />
         <Link
-          href="/"
+          href={link}
           className="uppercase underline underline-offset-3 hover:text-gray-300"
         >
           Saiba mais
