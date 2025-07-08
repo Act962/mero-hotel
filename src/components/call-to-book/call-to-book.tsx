@@ -14,7 +14,9 @@ export function CallToBook() {
         <div className="flex-1 max-w-md w-full flex items-center justify-between">
           <Popover>
             <PopoverTrigger className="flex items-center gap-2">
-              <span>Check-in Check-out</span>
+              <span className="uppercase text-sm font-light">
+                Check-in Check-out
+              </span>
               <ArrowDown className="size-4" />
             </PopoverTrigger>
             <PopoverContent align="start">
@@ -26,7 +28,9 @@ export function CallToBook() {
 
           <Popover>
             <PopoverTrigger className="flex items-center gap-2">
-              <span>Check-in Check-out</span>
+              <span className="uppercase text-sm font-light">
+                Check-in Check-out
+              </span>
               <ArrowDown className="size-4" />
             </PopoverTrigger>
             <PopoverContent align="start">

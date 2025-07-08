@@ -6,7 +6,8 @@ import { Input } from "../ui/input";
 export function Footer() {
   return (
     <div className="flex flex-col items-center justify-center py-24 bg-black text-white px-4 sm:px-8 ">
-      <div className="w-full max-w-5xl flex flex-col items-center justify-center gap-8">
+      {/* Container */}
+      <div className="w-full max-w-7xl flex flex-col items-center justify-center gap-8">
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4">
           {/* 1º Section */}
           <div className="flex flex-col gap-4">

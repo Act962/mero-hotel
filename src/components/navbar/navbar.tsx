@@ -1,72 +1,118 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import { Menu } from "lucide-react";
-
-import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Logo } from "../logo";
+import { Separator } from "../ui/separator";
+import Link from "next/link";
 
-// Links de navegação
-const NAV_LINKS = [
-  { href: "/", title: "O Mero" },
-  { href: "/hotel", title: "Hotel" },
-  { href: "/lounge", title: "Lounge" },
-  { href: "/mero-mar", title: "Mero Mar" },
-  { href: "/experiencias", title: "Experiência" },
+const LINKS = [
+  {
+    title: "O Mero",
+    path: "/",
+  },
+  {
+    title: "Hotel",
+    path: "/",
+  },
+  {
+    title: "Lounge",
+    path: "/",
+  },
+  {
+    title: "Mero Mar",
+    path: "/",
+  },
+  {
+    title: "Experiências",
+    path: "/",
+  },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
-  // Acompanha o scroll da página
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+    const hanldeScroll = () => {
+      setIsScrolled(window.scrollY > 300);
     };
 
-    // Verifica o estado inicial
-    handleScroll();
+    hanldeScroll();
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", hanldeScroll);
+
+    return () => window.removeEventListener("scroll", hanldeScroll);
   }, []);
 
+  useEffect(() => {
+    if (openMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [openMenu]);
+
   return (
-    <header className="fixed top-0 left-0 right-0 w-full px-4 z-50 bg-transparent">
-      <div className={"w-full max-w-7xl mx-auto space-y-4 mt-8"}>
-        {/* Topo com menu, nome e idiomas */}
-        <div
-          className={cn(
-            "flex items-center justify-between w-full transition-all",
-            isScrolled && "hidden"
-          )}
-        >
-          <Menu className="size-4" />
+    <div
+      className={cn(
+        "fixed top-0 w-full z-50 px-4 py-5 transition-colors duration-300 text-white",
+        isScrolled && "bg-background text-black backdrop-blur"
+      )}
+    >
+      <div className="w-full max-w-7xl mx-auto">
+        {/* Top Navbar */}
+        <div className="flex items-center justify-between">
+          <div className="size-4">
+            {/* Mobile */}
+            <Menu
+              className="size-4 md:hidden"
+              onClick={() => setOpenMenu(true)}
+            />
 
-          <span className="text-lg font-semibold">Mero Hotel</span>
-
-          <div className="flex items-center gap-2 text-sm">
-            <span>PT</span>
-            <Separator orientation="vertical" />
-            <span>EN</span>
+            {/* Button Desktop */}
+            {isScrolled && (
+              <Menu
+                className="size-4 hidden md:block"
+                onClick={() => setOpenMenu(true)}
+              />
+            )}
+          </div>
+          <Logo />
+          <div className="flex items-center gap-1 group">
+            <span className="group-hover:underline underline-offset-3 text-sm font-light">
+              PT
+            </span>
+            |
+            <span className="group-hover:underline underline-offset-3 text-sm font-light">
+              EN
+            </span>
           </div>
         </div>
+        {/* Bottom Navbar */}
+        {!isScrolled && (
+          <div className="hidden md:block mt-6">
+            <Separator />
 
-        {/* Navegação */}
-        <nav className="flex items-center justify-between gap-4 text-sm font-medium">
-          {NAV_LINKS.map(({ href, title }) => (
-            <Link
-              key={href}
-              href={href}
-              className="hover:underline transition-colors"
-            >
-              {title}
-            </Link>
-          ))}
-        </nav>
+            <div className="flex items-center justify-around mt-4">
+              {LINKS.map((link, index) => (
+                <Link
+                  key={`${link.path}-${index}`}
+                  href={link.path}
+                  className="uppercase text-sm font-light hover:underline underline-offset-3"
+                >
+                  {link.title}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
-    </header>
+    </div>
   );
 }

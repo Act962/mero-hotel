@@ -3,7 +3,7 @@ import React from "react";
 export function WelcomeSection() {
   return (
     <div className="w-full h-[26rem] flex flex-col items-center justify-center px-4 py-8 relative bg-background">
-      <div className="flex flex-col gap-10 max-w-5xl text-center">
+      <div className="flex flex-col gap-10 max-w-7xl text-center">
         <h1 className="text-xl sm:text-3xl font-medium tracking-[0.8rem]">
           BEM - VINDO
         </h1>
