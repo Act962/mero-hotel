@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Logo } from "../logo";
 import { Separator } from "../ui/separator";
@@ -61,7 +61,7 @@ export function Navbar() {
   return (
     <div
       className={cn(
-        "fixed top-0 w-full z-50 px-4 py-5 transition-colors duration-300 text-white",
+        "fixed top-0 w-full z-10 px-4 py-5 transition-colors duration-300 text-white",
         isScrolled && "bg-background text-black backdrop-blur"
       )}
     >
@@ -112,6 +112,34 @@ export function Navbar() {
             </div>
           </div>
         )}
+      </div>
+      {/* Menu Mobile */}
+
+      <div
+        className={`md:hidden fixed w-full h-screen left-0 top-0 bottom-0 overflow-hidden bg-background transition-all text-black px-4 pt-4 ${
+          openMenu ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between">
+          <h3>Mero Hotel</h3>
+          <X
+            className="size-4 cursor-pointer"
+            onClick={() => setOpenMenu(false)}
+          />
+        </div>
+        <Separator className="my-3" />
+        <div className="flex flex-col gap-2 mt-4">
+          {LINKS.map((link, index) => (
+            <Link
+              key={`${link.path}-${index}`}
+              href={link.path}
+              onClick={() => setOpenMenu(false)}
+              className="uppercase text-sm font-light hover:underline underline-offset-3"
+            >
+              {link.title}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );
