@@ -61,7 +61,7 @@ export function CallToBook() {
           </SheetTrigger>
           <SheetContent
             side="bottom"
-            className="min-h-[485px] rounded-tl-2xl rounded-tr-2xl flex flex-col items-center py-8 px-4"
+            className="min-h-[485px] rounded-tl-2xl rounded-tr-2xl flex flex-col items-center py-8 px-4 bg-background"
           >
             <button
               className="flex items-center uppercase tracking-[3px]  cursor-pointer group"

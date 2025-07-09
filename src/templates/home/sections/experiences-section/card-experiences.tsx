@@ -19,19 +19,17 @@ export default function CardExperiences({
 }: CardExperiencesProps) {
   return (
     <div>
-      <div className="relative overflow-hidden group">
+      <div className="relative overflow-hidden group h-64 md:h-72">
         <Image
           src={imageUrl}
           alt={alt}
-          className="w-full object-cover  group-hover:scale-110 transition-transform duration-300"
-          width={200}
-          height={200}
+          className="object-cover group-hover:scale-110 transition-transform duration-300"
+          fill
         />
       </div>
 
       <div className="text-start space-y-3 mt-8">
         <h3 className="font-medium text-xl tracking-[0.6rem] uppercase">
-          {" "}
           {title}{" "}
         </h3>
         <p className="text-xs sm:text-sm">{description}</p>
