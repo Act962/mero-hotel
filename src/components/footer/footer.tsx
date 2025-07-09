@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
-import { Input } from "../ui/input";
+import { Send } from "lucide-react";
 
 export function Footer() {
   return (
@@ -55,24 +55,30 @@ export function Footer() {
               </Link>
 
               <div className="flex items-center gap-x-1 justify-center sm:justify-end mt-5">
-                <Image
-                  src="/icons/instagram-light.svg"
-                  alt="Instagram"
-                  height={24}
-                  width={24}
-                />
-                <Image
-                  src="/icons/spotify-ligth.svg"
-                  alt="Instagram"
-                  height={24}
-                  width={24}
-                />
-                <Image
-                  src="/icons/linkedin-ligth.svg"
-                  alt="Instagram"
-                  height={24}
-                  width={24}
-                />
+                <Link href="/">
+                  <Image
+                    src="/icons/instagram-light.svg"
+                    alt="Instagram"
+                    height={24}
+                    width={24}
+                  />
+                </Link>
+                <Link href="/">
+                  <Image
+                    src="/icons/spotify-ligth.svg"
+                    alt="Instagram"
+                    height={24}
+                    width={24}
+                  />
+                </Link>
+                <Link href="/">
+                  <Image
+                    src="/icons/linkedin-ligth.svg"
+                    alt="Instagram"
+                    height={24}
+                    width={24}
+                  />
+                </Link>
               </div>
             </div>
 
@@ -80,10 +86,16 @@ export function Footer() {
               <p className="text-xs">
                 Inscreva-se na Newsletter Mero para receber as nossas novidades
               </p>
-              <Input
-                placeholder="Seu e-mail"
-                className="bg-[#4C4C4C] rounded-none placeholder:text-[#727272] border-none focus:outline-none focus-visible:ring-0"
-              />
+              <div className="h-9 bg-[#4C4C4C] px-3 flex items-center gap-1 w-full">
+                <input
+                  type="text"
+                  placeholder="Seu e-mail"
+                  className="w-full h-full min-w-0 border-none focus:outline-none focus-visible:ring-0 placeholder:text-[#727272]"
+                />
+                <button>
+                  <Send className="size-6 text-gray-400 hover:text-gray-300 transition-colors cursor-pointer" />
+                </button>
+              </div>
             </div>
           </div>
         </div>

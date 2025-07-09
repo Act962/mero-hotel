@@ -22,13 +22,12 @@ export function CardGroup({
         {title}
       </h3>
 
-      <div className="relative overflow-hidden group">
+      <div className="relative overflow-hidden group h-60 sm:h-72 md:h-96 w-full">
         <Image
           src={imageUrl}
           alt="Mero Hotel"
-          className="h-60 sm:h-72 md:h-96 w-full object-cover group-hover:scale-105 transition-transform duration-300"
-          width={2196}
-          height={1170}
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
         />
       </div>
 
