@@ -65,7 +65,7 @@ export function Navbar() {
         isScrolled && "bg-background text-black backdrop-blur"
       )}
     >
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-6xl mx-auto">
         {/* Top Navbar */}
         <div className="flex items-center justify-between">
           <div className="size-4">

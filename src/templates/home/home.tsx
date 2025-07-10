@@ -5,6 +5,7 @@ import {
   ExperiencesSection,
   AccommodationSection,
   LocationSection,
+  FaqSection,
 } from "./sections";
 
 export function HomePage() {
@@ -15,6 +16,7 @@ export function HomePage() {
       <GroupSection />
       <ExperiencesSection />
       <AccommodationSection />
+      <FaqSection />
       <LocationSection />
     </>
   );

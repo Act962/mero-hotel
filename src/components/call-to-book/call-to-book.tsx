@@ -13,7 +13,7 @@ export function CallToBook() {
   return (
     <div className="fixed bottom-0 text-white w-full h-16 bg-[#4C4C4C] flex items-center justify-between px-4 z-50 md:z-10">
       {/* Descktop */}
-      <div className="hidden md:flex w-full max-w-7xl mx-auto items-center justify-between gap-4">
+      <div className="hidden md:flex w-full max-w-6xl mx-auto items-center justify-between gap-4">
         <h3 className="font-light tracking-[2px] text-sm whitespace-nowrap">
           RESERVE SUA ESTADA
         </h3>
