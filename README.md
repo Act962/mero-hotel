@@ -42,7 +42,12 @@ https://www.kibo-ui.com/
 
 ### Librarys
 
-Shadcn UI
-Origin UI
-PrebuildUI
-Kibo UI
+Shadcn UI;
+Origin UI;
+PrebuildUI;
+Kibo UI;
+Preline;
+MvpBlock: https://blocks.mvp-subha.me/;
+shsfui;
+Skiper/UI;
+Tweakcn

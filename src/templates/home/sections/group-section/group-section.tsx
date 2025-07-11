@@ -26,8 +26,9 @@ const GROUPS = [
 
 export function GroupSection() {
   return (
-    <section className="min-h-screen bg-[url('/image-2.jpg')]  bg-bottom object-cover px-4 py-8 flex flex-col items-center justify-center text-white">
-      <div className="w-full max-w-6xl text-center mx-auto space-y-12 my-16">
+    <section className="relative min-h-screen px-4 py-8 flex flex-col items-center justify-center text-white">
+      <div className="absolute inset-0 bg-[url('/image-2.jpg')] bg-cover bg-center bg-no-repeat opacity-100 brightness-50" />
+      <div className="relative w-full max-w-6xl text-center mx-auto space-y-12 my-16">
         <h2 className="text-xl sm:text-3xl font-semibold tracking-[0.6rem] sm:tracking-[0.8rem]">
           O GRUPO
         </h2>

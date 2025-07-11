@@ -8,7 +8,7 @@ export function Footer() {
     <div className="flex flex-col items-center justify-center py-24 bg-black text-white px-4 sm:px-8 ">
       {/* Container */}
       <div className="w-full max-w-6xl flex flex-col items-center justify-center gap-8">
-        <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="w-full flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4">
           {/* 1º Section */}
           <div className="flex flex-col gap-4">
             <div className="space-y-3 text-center sm:text-start">
@@ -36,22 +36,28 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-0.5 text-center sm:text-end">
               <Link
-                href="/"
+                href="/termos-e-condicoes-de-uso"
                 className="text-sm hover:underline underline-offset-3"
               >
                 Termos e Condições de Uso
               </Link>
               <Link
-                href="/"
+                href="/politicas-de-hospedagem"
+                className="text-sm hover:underline underline-offset-3"
+              >
+                Políticas de Hospedagem
+              </Link>
+              <Link
+                href="/politicas-de-privacidade"
                 className="text-sm hover:underline underline-offset-3"
               >
                 Política de Privacidade
               </Link>
               <Link
-                href="/"
+                href="/politicas-de-cookies"
                 className="text-sm hover:underline underline-offset-3"
               >
-                Política de Cookies
+                Políticas de Cookies
               </Link>
 
               <div className="flex items-center gap-x-1 justify-center sm:justify-end mt-5">
