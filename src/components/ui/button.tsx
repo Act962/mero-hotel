@@ -12,9 +12,11 @@ const buttonVariants = cva(
         default:
           "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
         primary:
-          "bg-[#272727] uppercase rounded-none px-10 tracking-[0.2rem] font-light hover:bg-[#272727]/90 text-white",
+          "bg-[#272727] uppercase rounded-none px-10 tracking-[0.2rem] font-light hover:bg-[#272727]/90 text-white font-semibold",
         secondary:
-          "bg-[#E3E3E3] uppercase rounded-none px-10 tracking-[0.2rem] font-light hover:bg-[#E3E3E3]/90 text-[#696969]",
+          "bg-[#E3E3E3] uppercase rounded-none px-10 tracking-[0.2rem] font-light hover:bg-[#E3E3E3]/90 text-[#696969] font-semibold",
+        ligth:
+          "bg-white uppercase rounded-none px-10 tracking-[0.2rem] font-light hover:bg-white/90 text-[#696969] font-semibold",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
